@@ -5,12 +5,12 @@
     win_disk_facts:
   - name: Output first disk size
     debug:
-      verbosity: 3
+      #verbosity: 3
       var: ansible_facts.disks[0].size
   - name: Convert first system disk into various formats
     debug:
       msg: '{{ disksize_gib }} vs {{ disksize_gib_human }}'
-      verbosity: 3
+      #verbosity: 3
     vars:
       # Get first system disk
       disk: '{{ ansible_facts.disks|selectattr("system_disk")|first }}'
