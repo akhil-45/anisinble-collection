@@ -1,0 +1,8 @@
+[win]
+20.228.177.177 
+
+[win:vars]
+ansible_user = ansible-node
+ansible_password = adminadmin@123
+ansible_connection = winrm
+ansible_winrm_server_cert_validation = ignore
