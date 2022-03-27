@@ -1,8 +1,8 @@
 ---
-- hosts: win
-  tasks:
-  - name: Copy File
+ - name: Copy a folder recursively where the source is on the remote host
+   hosts: win
+   tasks:
     win_copy:
-      src: C:\Users\ansible-node\Downloads\text_files\*.*
+      src: C:\Users\ansible-node\Downloads\text_files
       dest: C:\ansible\dest_files
       remote_src: yes
